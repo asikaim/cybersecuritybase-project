@@ -25,7 +25,7 @@ Steps to reproduce:
 6. Click submit
 
 Fix: Original password has to be queried from the user and used for user verification before password reset.
-
+__________
 
 A3 - Cross-Site Scripting
 
@@ -44,7 +44,7 @@ Steps to reproduce:
 8. This sends you to duplicate page and browser runs the javascript that was previously stored
 
 Fix: Validate all inputs so they can't take characters "<" and ">"
-
+__________
 
 A4 - Insecure Direct Object References
 
@@ -62,7 +62,7 @@ Steps to reproduce:
 7. Message will show that ted has already registered and his address
 
 Fix: No simple fix. Only viable solution is to stop using names as parameters for URL.
-
+__________
 
 A6 - Sensitive Data Exposure 
 
@@ -81,7 +81,7 @@ Steps to reproduce:
 8. message displayed will show ted's address
 
 Fix: add "httpSession.invalidate();" into beginning of defaultMapping() and loadForm() in SignupController.
-
+__________
 
 A8 - Cross-Site Request Forgery 
 
@@ -105,7 +105,7 @@ Steps to reproduce:
 8. Web page will post the data needed for changing password to "changed" without user confirmation
 
 Fix: Remove http.csrf().disable() from SecurityConfiguration.java.c
-
+__________
 
 EXTRA
 
@@ -114,9 +114,10 @@ A5 - Security Misconfiguration
 
 SecurityConfiguration has http.headers disabled. This results in OWASP Zap showing lot of header errors.
 This can be fixed by removing http.headers().disable() (line 25) from code.
-
+__________
 
 A9 - Using Components with Known Vulnerabilities
 
 Application uses old version of spring framework (1.4.2) which can be seen from pom.xml.
 This can be fixed by changing 1.4.2.RELEASE to 1.5.9.RELEASE on line 16 of pom.xml file.
+__________
