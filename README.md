@@ -48,6 +48,8 @@ A4 - Insecure Direct Object References
 Attacker can write "/duplicate?name=XXX" into address bar and try to find out if the name was registered and what address that user has.
 Owasp ZAP identifies name=value as sensitive object.
 
+Issue: Insecure Direct Object References
+Steps to reproduce:
 1. Run java project
 2. Go to localhost:8080
 3. Sign in with username "ted" and password "ted" and click Login button
