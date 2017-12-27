@@ -10,6 +10,7 @@ Issues
 
 
 A2 - Broken Authentication and Session Management
+
 No verification before resetting password. 
 Application's password reset doesn't actually do anything, but in real situation attackers could get access to users account by resetting password.
 Problem can be identified by just visiting the page.
@@ -27,6 +28,7 @@ Fix: Original password has to be queried from the user and used for user verific
 
 
 A3 - Cross-Site Scripting
+
 Attacker can upload malicious javascript code through text fields.
 Owasp ZAP can be used to fuzz name and address fields, but tester would still need to manually find all pages that print stored scripts.
 
@@ -45,6 +47,7 @@ Fix: Validate all inputs so they can't take characters "<" and ">"
 
 
 A4 - Insecure Direct Object References
+
 Attacker can write "/duplicate?name=XXX" into address bar and try to find out if the name was registered and what address that user has.
 Owasp ZAP identifies name=value as sensitive object.
 
@@ -62,6 +65,7 @@ Fix: No simple fix. Only viable solution is to stop using names as parameters fo
 
 
 A6 - Sensitive Data Exposure 
+
 Re-entering person's name for event registration will show if that person has already registered and show his/her address.
 Resending form with POST -parameters in ZAP produces duplicate -message no matter which user created original registration.
 
@@ -80,6 +84,7 @@ Fix: add "httpSession.invalidate();" into beginning of defaultMapping() and load
 
 
 A8 - Cross-Site Request Forgery 
+
 Application doesn't prevent CSRF attacks so it's possible to create malicious website for directing browser requests while authenticated.
 Problem can be identified by creating a malicious web page using POST -parameters for resetPassword (from ZAP).
 
