@@ -6,7 +6,7 @@ In the first course project, your task is to create a web application that has a
 This course project gives examples of typical security issues in web applications, so it basically showcases bad programming.
 Project can be imported into NetBeans and run like any other program in previous part of this course (Securing Software). Page can be visited through browser of your choice by typing localhost:8080 into address bar. OWASP ZAP can be used to identify security issues, but is not necessary because of the simple nature of this application.
 __________
-#**Issues**
+**Issues**
 
 
 A2 - Broken Authentication and Session Management
@@ -107,7 +107,7 @@ Steps to reproduce:
 Fix: Remove http.csrf().disable() from SecurityConfiguration.java.c
 __________
 
-#**EXTRA**
+**EXTRA**
 
 
 A5 - Security Misconfiguration
