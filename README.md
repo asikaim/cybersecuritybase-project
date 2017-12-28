@@ -37,7 +37,7 @@ Steps to reproduce:
 1. Run java project
 2. Go to localhost:8080
 3. Sign in with username "ted" and password "ted" and click Login button
-4. In the "form" page type in "ted" as name and "<script> BOO! </script>" as address and press submit
+4. In the "form" page type in "ted" as name and "<script>alert('BOO!')</script>" as address and press submit
 5. "user has been signed up to the event" appears. This stores the script as executable that will run when sent to the victim's browser
 6. Go back to localhost:8080
 7. If you are still logged in, type in "ted" as name and anything you want as an address
